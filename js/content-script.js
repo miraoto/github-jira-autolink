@@ -9,4 +9,4 @@ injectScript = function(file, node) {
   return th.appendChild(s);
 };
 
-injectScript(chrome.extension.getURL('/embeded-script.js'), 'body');
+injectScript(chrome.extension.getURL('js/embeded-script.js'), 'body');

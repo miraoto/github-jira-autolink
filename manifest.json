@@ -14,13 +14,17 @@
         "https://github.com/*"
       ],
       "js": [
-        "content-script.js"
+        "js/content-script.js"
       ]
     }
   ],
   "web_accessible_resources": [
-    "embeded-script.js"
+    "js/const.js",
+    "js/embeded-script.js"
   ],
+  "browser_action" : {
+      "default_popup" : "html/popup.html"
+  },
   "permissions": [
     "https://github.com/*"
   ]
