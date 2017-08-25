@@ -8,6 +8,11 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
   "content_scripts": [
     {
       "matches": [
@@ -26,6 +31,7 @@
       "default_popup" : "html/popup.html"
   },
   "permissions": [
-    "https://github.com/*"
+    "https://github.com/*",
+    "storage"
   ]
 }
