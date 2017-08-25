@@ -1,5 +1,5 @@
-window.onload = function(){
-  document.getElementById('save').onclick = function(){
+window.onload = () => {
+  document.getElementById('save').onclick = () => {
     chrome.extension.sendRequest({storage: INPUT_URL_NAME, value: document.getElementById(INPUT_URL_NAME).value});
     chrome.extension.sendRequest({storage: INPUT_CODE_NAME, value: document.getElementById(INPUT_CODE_NAME).value});
     window.close();
