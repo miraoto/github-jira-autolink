@@ -20,8 +20,9 @@ const attachLinkToTitle = () => {
   href.setAttribute('href', `${localStorage[INPUT_URL_NAME]}${jiraId}`);
   href.setAttribute('target', '_blank');
   href.setAttribute('style', 'color: #0366d6;');
-  href.appendChild(document.createTextNode(`[${jiraId}]`));
-  title.appendChild(href);
+  href.appendChild(document.createTextNode(`${jiraId}`));
+  replacedTitle = title.innerText.replace(new RegExp(regex, 'g'), href.outerHTML);
+  title.innerHTML = replacedTitle;
 }
 
 const attachLinkToPullReq = () => {

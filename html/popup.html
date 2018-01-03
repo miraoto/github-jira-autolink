@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <script src="../js/const.js"></script>
-    <script src="../js/form.js"></script>
-  </head>
-  <body>
-    JIRA URL:
-    <input id="jira_url" type="text" placeholder="Ex) https://my.jira-url.com/browse/">
-    JIRA project code
-    <input id="jira_project_code" type="text"  placeholder="Ex) PROJECT">
-    <input id="save" type="button" value="Save">
+    <head>
+        <meta charset="utf-8">
+        <script src="../js/const.js"></script>
+        <script src="../js/form.js"></script>
+    </head>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        #content {
+          width:350px;
+          padding: 5px;
+        }
+        #header {
+          color: #ffffff;
+          background-color: #24292e;
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+        label {
+          margin-right: 5px;
+        }
+        input {
+          width: 250px;
+        }
+        input[type="button"] {
+          color: #fff;
+          background-color: #337ab7;
+          border-color: #2e6da4;
+        }
+
+        .form-input {
+          float: right;
+        }
+        .form-group {
+          margin-bottom: 15px;
+          text-align: right;
+          vertical-align: middle;
+        }
+        .form-group > .last {
+          margin-bottom: 10px;
+        }
+    </style>
+    <body>
+        <div id="header">
+            <span>Github JIRA auto link</span>
+        </div>
+        <div id="content">
+            <div class="form-group">
+                <label>JIRA URL</label>
+                <div class="form-input">
+                    <input id="jira_url" type="text" placeholder="https://myproject.atlassian.net/browse/">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Project code</label>
+                <div class="form-input">
+                    <input id="jira_project_code" type="text"  placeholder="PROJECT">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-input last">
+                    <input id="save" type="button" value="Apply">
+                </div>
+            </div>
+        </div>
   </body>
 </html>
